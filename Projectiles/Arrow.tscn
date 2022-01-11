@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Other/Icons/MV Icons PACK 1/MV Icons PACK 1/PIXEL FANTASY RPG ICONS 1 - 32x32/Individual Icons 32x32/book1-red.png" type="Texture" id=2]
+[ext_resource path="res://Projectiles/Projectile.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 0.84426
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.63277
+height = 3.56106
+
+[node name="Arrow" type="KinematicBody2D"]
+position = Vector2( 0, 1 )
+collision_layer = 0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 0.187286, 0 )
+collision_mask = 4096
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+rotation = -1.17112
+shape = SubResource( 1 )
+
+[editable path="Hitbox"]
