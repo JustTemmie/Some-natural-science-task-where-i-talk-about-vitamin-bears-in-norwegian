@@ -76,8 +76,8 @@ shape = SubResource( 8 )
 [node name="Textbox" parent="." instance=ExtResource( 3 )]
 
 [node name="Tween" parent="Textbox" index="1"]
-playback_speed = 2.0
-playback/speed = 2.0
+playback_speed = 2.2
+playback/speed = 2.2
 
 [connection signal="body_entered" from="InteractionComponent" to="Textbox" method="_on_InteractionComponent_body_entered"]
 [connection signal="body_exited" from="InteractionComponent" to="Textbox" method="_on_InteractionComponent_body_exited"]

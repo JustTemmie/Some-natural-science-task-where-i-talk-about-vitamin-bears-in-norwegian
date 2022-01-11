@@ -1014,6 +1014,10 @@ position = Vector2( 0.769287, 3.07694 )
 text1 = "Det trenger ikke være kjedelig å ta vitaminer!"
 text2 = "Derfor syntes jeg at vitaminbjørner er bedre for meg, og spesielt mine barn"
 
+[node name="Tween" parent="YSort/NPCs/ShopKeeper/Textbox" index="1"]
+playback_speed = 2.2
+playback/speed = 2.2
+
 [node name="ShopKeeper2" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2469, -619 )
 
@@ -1028,6 +1032,10 @@ text11 = "Dette betyr at om barn får tak i en hel boks vitaminbjørner"
 text12 = "Så kan det lede til skader for barnet"
 text13 = "Eller hvertfal sterk ubehag"
 
+[node name="Tween" parent="YSort/NPCs/ShopKeeper2/Textbox" index="1"]
+playback_speed = 2.2
+playback/speed = 2.2
+
 [node name="ShopKeeper3" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2360, -432 )
 
@@ -1041,6 +1049,10 @@ text3 = "Jeg føler jeg må kaste opp og mangen min gjør sinnsykt vondt. Er det
 text4 = "Og hva børr jeg gjøre?"
 text5 = "- ei jente fra www.ung.no/oss/mat/394625"
 
+[node name="Tween" parent="YSort/NPCs/ShopKeeper3/Textbox" index="1"]
+playback_speed = 2.2
+playback/speed = 2.2
+
 [node name="ShopKeeper4" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2442, -397 )
 
@@ -1053,16 +1065,21 @@ text2 = "og dette er hvorfor vi må stoppe å la vitaminbjørner være lett tilg
 text3 = "for barnene våre"
 text11 = "herregud asså, smh"
 
+[node name="Tween" parent="YSort/NPCs/ShopKeeper4/Textbox" index="1"]
+playback_speed = 2.2
+playback/speed = 2.2
+
 [node name="ShopKeeper5" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2035, -521 )
-
-[node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper5" index="1"]
-frame = 4
 
 [node name="Textbox" parent="YSort/NPCs/ShopKeeper5" index="5"]
 text1 = "Har du noen gang prøvd å gi et barn tran?"
 text2 = "Det har vært en av de værste opplevelsene av mitt liv."
 text3 = "Jeg ville valgt å gi barna mine vitaminbjørner ovenfor tran hver gang"
+
+[node name="Tween" parent="YSort/NPCs/ShopKeeper5/Textbox" index="1"]
+playback_speed = 2.2
+playback/speed = 2.2
 
 [node name="ShopKeeper6" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -1999, -740 )
@@ -1074,6 +1091,10 @@ text3 = "A, B6, B12, C, D3, E, biotin, folsyre, og niacin"
 text4 = "De er bra of immunforsvaret ditt"
 text5 = "og de er til og med uten tilsatt sukker!"
 text11 = "Det beste er at de smaker bringebær :)"
+
+[node name="Tween" parent="YSort/NPCs/ShopKeeper6/Textbox" index="1"]
+playback_speed = 2.2
+playback/speed = 2.2
 
 [node name="UI" type="CanvasLayer" parent="."]
 
