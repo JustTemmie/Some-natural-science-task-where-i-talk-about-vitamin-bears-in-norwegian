@@ -743,7 +743,7 @@ states/Run/node = SubResource( 40 )
 states/Run/position = Vector2( 727, 219 )
 transitions = [ "Run", "Idle", SubResource( 41 ), "Idle", "Run", SubResource( 42 ), "Idle", "Attack", SubResource( 43 ), "Attack", "Idle", SubResource( 44 ), "Roll", "Idle", SubResource( 45 ), "Idle", "Roll", SubResource( 46 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -10, 46 )
+graph_offset = Vector2( 12, 148 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=48]
 
@@ -814,17 +814,17 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 48 )
 parameters/Attack/blend_position = Vector2( 0, 0.1 )
-parameters/Idle/blend_position = Vector2( 0, 0.1 )
-parameters/Roll/blend_position = Vector2( 0, 0.1 )
+parameters/Idle/blend_position = Vector2( 0, 0.0689654 )
+parameters/Roll/blend_position = Vector2( 0, 0.0853448 )
 parameters/Run/blend_position = Vector2( 0, 0.1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
-rotation = 3.14159
+rotation = 1.5708
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
-gravity_vec = Vector2( 0, 0 )
 collision_mask = 8
+gravity_vec = Vector2( 0, 0 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
