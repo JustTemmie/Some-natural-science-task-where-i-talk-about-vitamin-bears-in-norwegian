@@ -39,18 +39,14 @@ position = Vector2( 165, 81 )
 [node name="ShopKeeper" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 257, 98 )
 
-[node name="AnimatedSprite" parent="YSort/ShopKeeper" index="1"]
+[node name="AnimatedSprite" parent="YSort/ShopKeeper" index="2"]
 frame = 3
 
-[node name="Textbox" parent="YSort/ShopKeeper" index="5"]
+[node name="Textbox" parent="YSort/ShopKeeper" index="6"]
 text1 = "ja dette er hvordan du snakker med noen"
 text2 = "i noen tilfeller må du kanskje snakke med samme person flere ganger"
 text11 = "ettersom dette kan gi deg ny dialog"
 text21 = "når du er klar, trykk på mellomrom for å starte"
-
-[node name="Tween" parent="YSort/ShopKeeper/Textbox" index="1"]
-playback_speed = 2.2
-playback/speed = 2.2
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -64,10 +60,10 @@ margin_top = 83.0
 margin_right = 123.0
 margin_bottom = 175.0
 custom_fonts/font = ExtResource( 5 )
-text = "Controls:
-arrow keys / wasd
-interact: C / H
-Roll: Z / K"
+text = "Kontroller:
+Piltastene / wasd
+Snakk: C / H
+Rull: Z / K"
 __meta__ = {
 "_edit_use_anchors_": false
 }

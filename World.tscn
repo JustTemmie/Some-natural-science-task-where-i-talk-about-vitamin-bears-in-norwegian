@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Objects/World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://WorldTileset.tres" type="TileSet" id=4]
 [ext_resource path="res://DirtCliffTileMap.tres" type="TileSet" id=5]
 [ext_resource path="res://Objects/World/Grass.tscn" type="PackedScene" id=6]
+[ext_resource path="res://timer.gd" type="Script" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/World/Tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=10]
@@ -13,9 +14,11 @@
 [ext_resource path="res://Objects/NPC/ShopKeeper.tscn" type="PackedScene" id=12]
 
 [node name="World" type="Node2D"]
-__meta__ = {
-"_edit_lock_": true
-}
+script = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 45.0
+autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
@@ -26,9 +29,6 @@ position = Vector2( 160, 90 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 6503.09, 3494.96 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Tilemaps" type="YSort" parent="."]
 
@@ -1004,27 +1004,23 @@ position = Vector2( -1768, 328 )
 [node name="ShopKeeper" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2020, -629 )
 
-[node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper" index="1"]
-frame = 2
-
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper/InteractionComponent" index="0"]
 position = Vector2( 0.769287, 3.07694 )
 
-[node name="Textbox" parent="YSort/NPCs/ShopKeeper" index="5"]
+[node name="Textbox" parent="YSort/NPCs/ShopKeeper" index="6"]
 text1 = "Det trenger ikke være kjedelig å ta vitaminer!"
 text2 = "Derfor syntes jeg at vitaminbjørner er bedre for meg, og spesielt mine barn"
-
-[node name="Tween" parent="YSort/NPCs/ShopKeeper/Textbox" index="1"]
-playback_speed = 2.2
-playback/speed = 2.2
 
 [node name="ShopKeeper2" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2469, -619 )
 
+[node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper2" index="2"]
+frame = 0
+
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper2/InteractionComponent" index="0"]
 position = Vector2( 0, 2.69232 )
 
-[node name="Textbox" parent="YSort/NPCs/ShopKeeper2" index="5"]
+[node name="Textbox" parent="YSort/NPCs/ShopKeeper2" index="6"]
 text1 = "Vitaminbjørner er veldig gode, de smaker som seigmenn"
 text2 = "Men ett av problemene med dette er at barn kan lett bli avhengig"
 text3 = "Og om noen spiser for mange vitaminbjørner så kan det bli skadelig."
@@ -1032,69 +1028,61 @@ text11 = "Dette betyr at om barn får tak i en hel boks vitaminbjørner"
 text12 = "Så kan det lede til skader for barnet"
 text13 = "Eller hvertfal sterk ubehag"
 
-[node name="Tween" parent="YSort/NPCs/ShopKeeper2/Textbox" index="1"]
-playback_speed = 2.2
-playback/speed = 2.2
-
 [node name="ShopKeeper3" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2360, -432 )
+
+[node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper3" index="2"]
+frame = 0
 
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper3/InteractionComponent" index="0"]
 position = Vector2( 0.000244141, 4.61539 )
 
-[node name="Textbox" parent="YSort/NPCs/ShopKeeper3" index="5"]
+[node name="Textbox" parent="YSort/NPCs/ShopKeeper3" index="6"]
 text1 = "Hei, jeg ELSKER vitaminbjørner og i dag så spiste jeg en veldig stor dose....."
 text2 = "rundt 30 stk. etter dær har jeg ikke følt Meg bra. "
 text3 = "Jeg føler jeg må kaste opp og mangen min gjør sinnsykt vondt. Er dette farlig?"
 text4 = "Og hva børr jeg gjøre?"
 text5 = "- ei jente fra www.ung.no/oss/mat/394625"
 
-[node name="Tween" parent="YSort/NPCs/ShopKeeper3/Textbox" index="1"]
-playback_speed = 2.2
-playback/speed = 2.2
-
 [node name="ShopKeeper4" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2442, -397 )
+
+[node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper4" index="2"]
+frame = 0
 
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper4/InteractionComponent" index="0"]
 position = Vector2( 0, 3.07691 )
 
-[node name="Textbox" parent="YSort/NPCs/ShopKeeper4" index="5"]
+[node name="Textbox" parent="YSort/NPCs/ShopKeeper4" index="6"]
 text1 = "Som flere personer har sakt, dette er ett problem"
 text2 = "og dette er hvorfor vi må stoppe å la vitaminbjørner være lett tilgjengelig"
 text3 = "for barnene våre"
 text11 = "herregud asså, smh"
 
-[node name="Tween" parent="YSort/NPCs/ShopKeeper4/Textbox" index="1"]
-playback_speed = 2.2
-playback/speed = 2.2
-
 [node name="ShopKeeper5" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -2035, -521 )
 
-[node name="Textbox" parent="YSort/NPCs/ShopKeeper5" index="5"]
+[node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper5" index="2"]
+frame = 0
+
+[node name="Textbox" parent="YSort/NPCs/ShopKeeper5" index="6"]
 text1 = "Har du noen gang prøvd å gi et barn tran?"
 text2 = "Det har vært en av de værste opplevelsene av mitt liv."
 text3 = "Jeg ville valgt å gi barna mine vitaminbjørner ovenfor tran hver gang"
 
-[node name="Tween" parent="YSort/NPCs/ShopKeeper5/Textbox" index="1"]
-playback_speed = 2.2
-playback/speed = 2.2
-
 [node name="ShopKeeper6" parent="YSort/NPCs" instance=ExtResource( 12 )]
 position = Vector2( -1999, -740 )
 
-[node name="Textbox" parent="YSort/NPCs/ShopKeeper6" index="5"]
+[node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper6" index="2"]
+frame = 0
+
+[node name="Textbox" parent="YSort/NPCs/ShopKeeper6" index="6"]
 text1 = "Vitaminbjørner er fantastisk, de er sammensatt av multivitaminer"
 text2 = "De inneholder 9 viktige vitaminer"
 text3 = "A, B6, B12, C, D3, E, biotin, folsyre, og niacin"
 text4 = "De er bra of immunforsvaret ditt"
 text5 = "og de er til og med uten tilsatt sukker!"
 text11 = "Det beste er at de smaker bringebær :)"
-
-[node name="Tween" parent="YSort/NPCs/ShopKeeper6/Textbox" index="1"]
-playback_speed = 2.2
-playback/speed = 2.2
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -1104,6 +1092,8 @@ margin_left = 8.02525
 margin_top = 5.00339
 margin_right = 68.0253
 margin_bottom = 16.0034
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="Camera2D"]
 [editable path="YSort/NPCs/ShopKeeper"]
