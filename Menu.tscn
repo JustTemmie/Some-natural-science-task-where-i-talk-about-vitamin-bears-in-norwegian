@@ -12,9 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -279, -68 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -40,7 +37,7 @@ position = Vector2( 165, 81 )
 position = Vector2( 257, 98 )
 
 [node name="AnimatedSprite" parent="YSort/ShopKeeper" index="2"]
-frame = 3
+frame = 0
 
 [node name="Textbox" parent="YSort/ShopKeeper" index="6"]
 text1 = "ja dette er hvordan du snakker med noen"

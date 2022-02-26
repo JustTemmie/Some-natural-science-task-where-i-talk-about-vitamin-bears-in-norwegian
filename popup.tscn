@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://text box font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://popupscript.gd" type="Script" id=2]
+
+[node name="Control" type="PopupPanel"]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -160.0
+margin_bottom = -84.0
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -28.5
+margin_right = 28.5
+margin_bottom = 16.0
+custom_fonts/font = ExtResource( 1 )
+text = "Yuo win :)"
+
+[node name="Label2" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "du har nå lært alt som er å lære om vitamin bjørner (:"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 119.0
+margin_top = 62.0
+margin_right = 145.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 1 )
+text = "OK"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]

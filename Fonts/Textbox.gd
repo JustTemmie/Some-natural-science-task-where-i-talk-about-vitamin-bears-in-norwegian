@@ -59,6 +59,8 @@ export var text48 = "None"
 export var text49 = "None"
 export var text50 = "None"
 
+export var npc_number = 0 
+
 onready var rawtext = [text1, text2, text3, text4, text5, text6, text7, text8, text9, text10]
 onready var secondrawtext = [text11, text12, text13, text14, text15, text16, text17, text18, text19, text20]
 onready var thirdrawtext = [text21, text22, text23, text24, text25, text26, text27, text28, text29, text30]
@@ -108,6 +110,18 @@ func _process(delta):
 				elif dialoguePage == 5:
 					dialoguePage = 1
 					add_to_dialogue(fifthrawtext)
+					if npc_number == 0:
+						Counter.id0 = true
+					if npc_number == 1:
+						Counter.id1 = true
+					if npc_number == 2:
+						Counter.id2 = true
+					if npc_number == 3:
+						Counter.id3 = true
+					if npc_number == 4:
+						Counter.id4 = true
+					if npc_number == 5:
+						Counter.id5 = true
 
 				for i in dialogue:
 					queue_text(i)
@@ -142,6 +156,7 @@ func show_textbox():
 	textboxContainer.show()
 
 func display_text():
+	
 	var nextText = text_queue.pop_front()
 	label.text = nextText
 	label.percent_visible = 0.0
@@ -157,6 +172,18 @@ func add_to_dialogue(page):
 			dialogue.append(i)
 	if not dialogue:
 		add_to_dialogue(rawtext)
+		if npc_number == 0:
+			Counter.id0 = true
+		if npc_number == 1:
+			Counter.id1 = true
+		if npc_number == 2:
+			Counter.id2 = true
+		if npc_number == 3:
+			Counter.id3 = true
+		if npc_number == 4:
+			Counter.id4 = true
+		if npc_number == 5:
+			Counter.id5 = true
 
 
 func _on_Tween_tween_completed():
