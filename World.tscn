@@ -19,7 +19,7 @@
 script = ExtResource( 7 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 45.0
+wait_time = 30.0
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -27,7 +27,7 @@ stream = ExtResource( 11 )
 autoplay = true
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 160, 90 )
+position = Vector2( 178, 73 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 6503.09, 3494.96 )
@@ -1007,7 +1007,7 @@ position = Vector2( -1768, 328 )
 position = Vector2( -2020, -629 )
 
 [node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper" index="2"]
-frame = 2
+frame = 4
 
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper/InteractionComponent" index="0"]
 position = Vector2( 0.769287, 3.07694 )
@@ -1020,7 +1020,7 @@ text2 = "Derfor syntes jeg at vitaminbjørner er bedre for meg, og spesielt mine
 position = Vector2( -2469, -619 )
 
 [node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper2" index="2"]
-frame = 4
+frame = 1
 
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper2/InteractionComponent" index="0"]
 position = Vector2( 0, 2.69232 )
@@ -1038,7 +1038,7 @@ npc_number = 1
 position = Vector2( -2360, -432 )
 
 [node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper3" index="2"]
-frame = 4
+frame = 1
 
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper3/InteractionComponent" index="0"]
 position = Vector2( 0.000244141, 4.61539 )
@@ -1055,7 +1055,7 @@ npc_number = 2
 position = Vector2( -2442, -397 )
 
 [node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper4" index="2"]
-frame = 4
+frame = 1
 
 [node name="CollisionShape2D" parent="YSort/NPCs/ShopKeeper4/InteractionComponent" index="0"]
 position = Vector2( 0, 3.07691 )
@@ -1071,7 +1071,7 @@ npc_number = 3
 position = Vector2( -2035, -521 )
 
 [node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper5" index="2"]
-frame = 4
+frame = 1
 
 [node name="Textbox" parent="YSort/NPCs/ShopKeeper5" index="6"]
 text1 = "Har du noen gang prøvd å gi et barn tran?"
@@ -1083,7 +1083,7 @@ npc_number = 4
 position = Vector2( -1999, -740 )
 
 [node name="AnimatedSprite" parent="YSort/NPCs/ShopKeeper6" index="2"]
-frame = 4
+frame = 1
 
 [node name="Textbox" parent="YSort/NPCs/ShopKeeper6" index="6"]
 text1 = "Vitaminbjørner er fantastisk, de er sammensatt av multivitaminer"
@@ -1098,7 +1098,6 @@ npc_number = 5
 script = ExtResource( 14 )
 
 [node name="HealthUI" parent="UI" instance=ExtResource( 8 )]
-visible = false
 margin_left = 8.02525
 margin_top = 5.00339
 margin_right = 68.0253
@@ -1114,8 +1113,10 @@ margin_left = -80.0
 margin_top = -48.0
 margin_right = 80.0
 margin_bottom = 48.0
+script = null
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="UI/Control/Panel/Button" to="." method="_on_Button_pressed"]
 
 [editable path="Camera2D"]
 [editable path="YSort/NPCs/ShopKeeper"]
@@ -1136,3 +1137,4 @@ margin_bottom = 48.0
 [editable path="YSort/NPCs/ShopKeeper6"]
 [editable path="YSort/NPCs/ShopKeeper6/InteractionComponent"]
 [editable path="YSort/NPCs/ShopKeeper6/Textbox"]
+[editable path="UI/Control"]

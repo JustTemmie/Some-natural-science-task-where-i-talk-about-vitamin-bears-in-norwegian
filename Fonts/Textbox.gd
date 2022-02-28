@@ -166,24 +166,24 @@ func display_text():
 	tween.start()
 
 func add_to_dialogue(page):
+	if npc_number == 0:
+		Counter.id0 = true
+	if npc_number == 1:
+		Counter.id1 = true
+	if npc_number == 2:
+		Counter.id2 = true
+	if npc_number == 3:
+		Counter.id3 = true
+	if npc_number == 4:
+		Counter.id4 = true
+	if npc_number == 5:
+		Counter.id5 = true
 	dialogue = []
 	for i in page:
 		if not "None" in i:
 			dialogue.append(i)
 	if not dialogue:
 		add_to_dialogue(rawtext)
-		if npc_number == 0:
-			Counter.id0 = true
-		if npc_number == 1:
-			Counter.id1 = true
-		if npc_number == 2:
-			Counter.id2 = true
-		if npc_number == 3:
-			Counter.id3 = true
-		if npc_number == 4:
-			Counter.id4 = true
-		if npc_number == 5:
-			Counter.id5 = true
 
 
 func _on_Tween_tween_completed():

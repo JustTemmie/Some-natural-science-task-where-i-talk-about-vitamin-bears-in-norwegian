@@ -82,8 +82,8 @@ _global_script_class_icons={
 
 config/name="naturfag oppgave"
 run/main_scene="res://Menu.tscn"
-boot_splash/fullsize=false
-config/icon="res://icon.png"
+boot_splash/image="res://UI/beav.png"
+config/icon="res://UI/beav.png"
 
 [autoload]
 
