@@ -36,6 +36,9 @@ position = Vector2( 165, 81 )
 [node name="ShopKeeper" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 257, 98 )
 
+[node name="AnimatedSprite" parent="YSort/ShopKeeper" index="2"]
+frame = 1
+
 [node name="Textbox" parent="YSort/ShopKeeper" index="6"]
 text1 = "ja dette er hvordan du snakker med noen"
 text2 = "i noen tilfeller må du kanskje snakke med samme person flere ganger"
